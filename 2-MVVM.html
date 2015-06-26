@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="githubApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="base.css"/>
+
+</head>
+<body>
+
+<div ng-controller="SearchController">
+    <input type="text" ng-model="user.name"/>
+    <div>{{user.name}}</div>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script>
+
+    angular.module('githubApp', ['ng']);
+
+    var githubApp = angular.module('githubApp');
+
+    githubApp.controller('SearchController', function ($scope) {
+        $scope.user = {
+            name: 'Henry Cavendish'
+        };
+    });
+
+</script>
+</body>
+</html>
