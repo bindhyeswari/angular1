@@ -30,17 +30,16 @@
     </script>
 </head>
 <body>
-    <div ng-controller="MyController">
-        {{message}}
-        <input type="text" ng-model="query" ng-keydown="search($event)"/>
-        <div class="panel">
-            <ul>
-                <li ng-repeat="repo in repositories | orderBy : ['+pushed_at', '-size']">
-                    <a href="{{repo['html_url']}}">{{repo.name}}</a>
-                    has a size: {{repo.size}} and was last pushed at: {{repo.pushed_at | date}}
-                </li>
-            </ul>
-        </div>
+<div ng-controller="MyController">
+    {{message}}
+    <input type="text" ng-model="query" ng-keydown="search($event)"/>
+    <div class="panel">
+        <ul>
+            <table>
+                <thead></thead>
+            </table>
+        </ul>
     </div>
+</div>
 </body>
 </html>
